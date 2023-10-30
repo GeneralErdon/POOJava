@@ -25,12 +25,4 @@ public class Libro {
         this.num_ejemplares_prestados = num_ejemplares_prestados;
     }
 
-    public static void main(String[] args){
-        Autor leandro = new Autor("Leandro", "Fermín");
-        Libro principito = new Libro("principito", leandro, 10, 5);
-        System.out.println();
-
-    }
-
-    
 }
