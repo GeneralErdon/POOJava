@@ -1,4 +1,3 @@
-import javax.management.RuntimeOperationsException;
 
 class Problema extends Exception{
 }
