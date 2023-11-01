@@ -1,3 +1,5 @@
+package tarea;
+
 public class Fraccion{
     int numerador, denominador;
 

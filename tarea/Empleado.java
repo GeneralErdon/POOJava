@@ -1,3 +1,4 @@
+package tarea;
 class DNI {
     private String rif;
     private String nombre;
