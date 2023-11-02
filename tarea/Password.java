@@ -90,6 +90,7 @@ public class Password{
 
     public boolean modificarContraseña(){
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Ingrese una nueva contraseña: ");
         String newPassword = scanner.nextLine();
 
@@ -149,8 +150,8 @@ public class Password{
                     System.out.println("Desea cambiarla nuevamente? Y/N");
 
                 } else {
-                    System.out.println("La contraseña no ha sido modificada porque no es fuerte.");
-                    System.out.println("Desea cambiarla realmente o dejar la que ya existe? Y/N");
+                    System.out.println("La contraseña NO ha sido modificada porque no es fuerte.");
+                    System.out.println("Desea cambiarla realmente? Y/N");
                 }
             } else if (input.equals("N")) {
                 break;
