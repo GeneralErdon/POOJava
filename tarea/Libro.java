@@ -5,6 +5,14 @@ public class Libro {
     String autor;
     private int num_ejemplares, num_ejemplares_prestados;
 
+    /**
+     * Constructor del Libro, Arroja una Excepción si 
+     * es mayor el numero de ejemplares prestados que el existente.
+     * @param titulo
+     * @param autor
+     * @param num_ejemplares
+     * @param num_ejemplares_prestados
+     */
     public Libro(String titulo, String autor, int num_ejemplares, int num_ejemplares_prestados){
         this.titulo = titulo;
         this.autor = autor;

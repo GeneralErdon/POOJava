@@ -3,10 +3,19 @@ package tarea;
 public class Fraccion{
     int numerador, denominador;
 
+    /**
+     * Constructor de una Fracción, recibe numerador y denominador
+     * @param numerador
+     * @param denominador
+     */
     public Fraccion(int numerador, int denominador){
         this.numerador = numerador;
         this.denominador = denominador;
     }
+    /**
+     * Constructor, asume que si no ingresas denominador, entonces este será 1
+     * @param numerador
+     */
     public Fraccion(int numerador){
         this.numerador = numerador;
         this.denominador = 1;
@@ -148,6 +157,13 @@ public class Fraccion{
     public String toString(){
         return this.numerador + "/" + this.denominador;
     }
+
+    /**
+     * Pequeño programa para que puedan verificar el funcionamiento de Fracción
+     * como ej enunciado del ejercicio no pide especificamente esto.
+     * Acá se puede escribir otro Test que se quiera realizar.
+     * @param args
+     */
     public static void main(String[] args){
         Fraccion f1 = new Fraccion(10, 2);
         Fraccion f2 = new Fraccion(5, 2);

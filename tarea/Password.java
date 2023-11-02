@@ -22,6 +22,7 @@ import java.util.Scanner;
 public class Password{
     private String password;
 
+    // Constructores de la clase
     public Password(){
         this.password = generatePassword(8);
     }
@@ -33,6 +34,14 @@ public class Password{
         }
     }
 
+    /**
+     * Método para generación aleatoria de Contraseña.
+     * Se asegura que la contraseña siempre tenga por lo menos
+     * 2 mayusculas, 2 minusculas, 1 digito y 1 caracter especial
+     *  
+     * @param length
+     * @return Contraseña aleatoria
+     */
     private String generatePassword(int length){
         String mayusChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String minusChars = mayusChars.toLowerCase();
@@ -68,6 +77,11 @@ public class Password{
                 .toString(); // Lo vuelve a convertir a String
     }
 
+    /**
+     * método que verifica si la contraseña actual es fuerte
+     * basandose en los criterios de mayusculas, minusculas, digito y caracter especial
+     * @return
+     */
     public boolean esFuerte() {
         int upperCaseCount = 0;
         int lowerCaseCount = 0;
@@ -88,6 +102,11 @@ public class Password{
         return this.password;
     }
 
+    /**
+     * Método para modificar la contraseña
+     * Si no es fuerte la nueva contraseña, no la modifica
+     * @return True si la modificó, False caso contrario
+     */
     public boolean modificarContraseña(){
         Scanner scanner = new Scanner(System.in);
 
@@ -105,6 +124,12 @@ public class Password{
         return false;
 
     }
+    
+    /**
+     * Método Estático de Main, si se ejecuta esta clase de Java
+     * entonces se ejecutará la siguiente prueba de que funciona la clase Password.
+     * @param args
+     */
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         Password p1;

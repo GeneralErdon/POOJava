@@ -78,14 +78,30 @@ public class Empleado implements Comparable<Empleado> {
 
     public static double importeHoraExtra;
 
+    /**
+     * Constructor por defecto de un empleado
+     */
     public Empleado() {
     }
 
+    /**
+     * Constructor De empleado que utiliza una Clase llamada DNI, que contiene 
+     * identificacion, nombre y estado civil
+     * @param Dni
+     */
     public Empleado(DNI Dni) {
         this.rif = Dni.getRif();
         this.nombre = Dni.getNombre();
         this.esCasado = Dni.getEsCasado();
     }
+
+    /**
+     * Método compareTo, que se implementa desde la Clase Comparable.
+     * Permite comparar con la Clase actual, para de esta forma
+     * poder realizar ordenamientos con instancias de Empleado.
+     * @param otroEmpleado
+     * @return Valor comparable
+     */
     @Override
     public int compareTo(Empleado otroEmpleado){
         // Ordenar por salario (primero salarios luego nombres por si son iguales)
@@ -155,10 +171,18 @@ public class Empleado implements Comparable<Empleado> {
 
     // Métodos adicionales
 
+    /**
+     * Método para el calculo de complemento de horas extra
+     * @return Complemento de horas extra
+     */
     public double calculoComplementoHorasExtra(){
         return this.horasExtra * importeHoraExtra;
     }
 
+    /**
+     * Método para calcular el sueldo bruto
+     * @return
+     */
     public double calcularSueldoBruto(){
         return this.sueldoBase + this.calculoComplementoHorasExtra();
     }
@@ -180,6 +204,10 @@ public class Empleado implements Comparable<Empleado> {
     }
 
 
+    /**
+     * Método de toString reescrito para poder representar los Empleados
+     * con un formato más legible
+     */
     @Override
     public String toString(){
         String result;
@@ -194,6 +222,11 @@ public class Empleado implements Comparable<Empleado> {
         return result;
     }
 
+    /**
+     * Método Main, que ejecuta un pequeño programa para poner a prueba el funcionamiento
+     * de la Clase Empleado.
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int MAX_EMPLEADOS = 20;
