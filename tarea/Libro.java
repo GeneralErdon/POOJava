@@ -1,7 +1,5 @@
 package tarea;
 
-class Problema extends Exception{
-}
 public class Libro {
     String titulo;
     String autor;

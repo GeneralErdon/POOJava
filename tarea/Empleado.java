@@ -76,7 +76,7 @@ public class Empleado implements Comparable<Empleado> {
     private int cantidadHijos;
     private boolean esCasado ;
 
-    static double importeHoraExtra;
+    public static double importeHoraExtra;
 
     public Empleado() {
     }
